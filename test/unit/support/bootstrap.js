@@ -3,7 +3,7 @@
  */
 
 var pg = require('pg'),
-    _ = require('lodash'),
+    _ = require('@sailshq/lodash'),
     adapter = require('../../../lib/adapter');
 
 var Support = module.exports = {};

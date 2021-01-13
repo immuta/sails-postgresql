@@ -1,5 +1,5 @@
 var adapter = require('../../lib/adapter'),
-    _ = require('lodash'),
+    _ = require('@sailshq/lodash'),
     should = require('should'),
     support = require('./support/bootstrap');
 

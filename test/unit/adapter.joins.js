@@ -1,5 +1,5 @@
 var Sequel = require('waterline-sequel'),
-    _ = require('lodash'),
+    _ = require('@sailshq/lodash'),
     should = require('should'),
     Support = require('./support/bootstrap');
 
@@ -86,7 +86,7 @@ describe('query', function() {
         var query = new Sequel(schemaDef, Support.SqlOptions).find('user', criteria);
         var sql = 'SELECT "user"."name", "user"."id", "user"."createdAt", "user"."updatedAt", '+
                   '"__pet"."name" AS "id___name", "__pet"."id" AS "id___id", "__pet"."createdAt" ' +
-                  'AS "id___createdAt", "__pet"."updatedAt" AS "id___updatedAt", "__pet"."owner_id" ' + 
+                  'AS "id___createdAt", "__pet"."updatedAt" AS "id___updatedAt", "__pet"."owner_id" ' +
                   'AS "id___owner_id" FROM "user" AS "user"  LEFT OUTER JOIN "pet" AS "__pet" ON ' +
                   '"user".\"id\" = \"__pet\".\"owner\"  LIMIT 30 OFFSET 0';
         query.query[0].should.eql(sql);
