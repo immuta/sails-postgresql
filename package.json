@@ -1,7 +1,7 @@
 {
   "name": "sails-postgresql",
   "description": "a postgreSQL adapter for Waterline and Sails.js",
-  "version": "0.12.2",
+  "version": "0.12.2-immuta3",
   "author": "Cody Stoltman <particlebanana@gmail.com>",
   "url": "http://github.com/balderdashy/sails-postgresql",
   "keywords": [
@@ -18,9 +18,9 @@
     "async": "1.5.2",
     "@sailshq/lodash": "^3.10.2",
     "pg": "4.5.7",
-    "waterline-cursor": "0.0.7",
+    "waterline-cursor": "github:immuta/waterline-cursor#v0.0.7-immuta1",
     "waterline-errors": "0.10.1",
-    "waterline-sequel": "0.6.4"
+    "waterline-sequel": "github:immuta/waterline-sequel#v0.6.4-immuta1"
   },
   "devDependencies": {
     "mocha": "2.5.3",
