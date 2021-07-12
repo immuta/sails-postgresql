@@ -17,7 +17,7 @@
   "dependencies": {
     "async": "1.5.2",
     "@sailshq/lodash": "^3.10.2",
-    "pg": "4.5.7",
+    "pg": "8.5.1",
     "waterline-cursor": "github:immuta/waterline-cursor#v0.0.7-immuta1",
     "waterline-errors": "0.10.1",
     "waterline-sequel": "github:immuta/waterline-sequel#v0.6.4-immuta1"
