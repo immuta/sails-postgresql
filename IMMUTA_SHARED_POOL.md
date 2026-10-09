@@ -16,7 +16,8 @@ connections: {
 Behavior:
 
 - If `pool` / `pgPool` is set during `registerConnection`, the adapter uses that pool for all queries.
-- `teardown` does **not** call `pool.end()` for an external pool (the owner must end it).
+- The pool is not stored on the connection config object (avoids leaking credentials in error logs).
+- `teardown` does **not** call `pool.end()` for an external pool (the owner must end it). The adapter only drops its reference once no registered connections still use that pool (or on full teardown).
 - If no external pool is provided, the adapter creates and owns a pool as before.
 
 Consumers (e.g. bodata) should depend on this package via a git tag after merge, e.g. `github:immuta/sails-postgresql#v0.12.2-immuta5`.
